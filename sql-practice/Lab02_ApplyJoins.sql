@@ -108,13 +108,16 @@ LEFT OUTER JOIN Dependent D
 
 -- 13.Insert your personal data to the employee table as a new employee in department number 30,
 -- SSN = 102672, Superssn = 112233, salary=3000.
-INSERT INTO Employee (Dno, SSN, Superssn, Salary)
-VALUES (30, 102672, 112233, 3000)
+INSERT INTO Employee (Fname, Lname,Bdate, Address, Sex, Dno, SSN, Superssn, Salary)
+VALUES ('Israa', 'Emad', '1999-08-06', 'Marriott Hotel16 Gezira Street, Cairo', 'F', 30, 102672, 112233, 3000);
+SELECT * FROM Employee WHERE SSN = 102672
 
 -- 14.Insert another employee with personal data your friend as new employee in department number 30,
 -- SSN = 102660, but don’t enter any value for salary or supervisor number to him.
-INSERT INTO Employee (Dno, SSN)
-VALUES (30, 102660)
+INSERT INTO Employee (Fname, Lname, Bdate, Address, Sex, Dno, SSN)
+VALUES ('Ali', 'Ahmed','2000-03-01', '42 El-Tahrir Street 5th Dokky, Giza', 'M', 30, 102660)
+SELECT * FROM Employee WHERE SSN = 102660
+
 
 -- 15.Upgrade your salary by 20 % of its last value.
 UPDATE Employee
